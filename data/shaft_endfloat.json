@@ -1,0 +1,70 @@
+{
+  "name": "Gearbox shaft axial end float",
+  "description": "Axial stack setting the end float of a shaft carried on two deep-groove ball bearings, located by a spacer and a ground shim inside a housing bore. End float must stay positive (no axial preload on the bearings) and bounded (no excessive play).",
+  "closing_dimension": "end float",
+  "unit": "mm",
+  "lsl": 0.05,
+  "usl": 0.25,
+  "sigma_per_tolerance": 3.0,
+  "contributors": [
+    {
+      "name": "HOUSING_BORE_DEPTH",
+      "nominal": 60.0,
+      "lower": -0.1,
+      "upper": 0.1,
+      "direction": 1,
+      "distribution": "normal",
+      "mean_shift": 0.3,
+      "source": "machined in-house",
+      "adjustable": true,
+      "note": "Bored on a horizontal machining centre. Mean shift assumed at 0.3 sigma for thermal drift across a shift."
+    },
+    {
+      "name": "BEARING_1_WIDTH",
+      "nominal": 15.0,
+      "lower": -0.03,
+      "upper": 0.03,
+      "direction": -1,
+      "distribution": "triangular",
+      "mode": 0.012,
+      "source": "purchased, DIN 620 normal class",
+      "adjustable": false,
+      "note": "Supplier grinds to the upper half of the width band, so the distribution is skewed high rather than normal."
+    },
+    {
+      "name": "SPACER_LENGTH",
+      "nominal": 24.95,
+      "lower": -0.05,
+      "upper": 0.05,
+      "direction": -1,
+      "distribution": "normal",
+      "mean_shift": 0.0,
+      "source": "machined in-house",
+      "adjustable": true,
+      "note": "Turned and faced, both ends in one setup."
+    },
+    {
+      "name": "BEARING_2_WIDTH",
+      "nominal": 15.0,
+      "lower": -0.03,
+      "upper": 0.03,
+      "direction": -1,
+      "distribution": "triangular",
+      "mode": 0.012,
+      "source": "purchased, DIN 620 normal class",
+      "adjustable": false,
+      "note": "Same supplier and batch behaviour as bearing 1."
+    },
+    {
+      "name": "RETAINING_SHIM",
+      "nominal": 4.9,
+      "lower": -0.02,
+      "upper": 0.02,
+      "direction": -1,
+      "distribution": "uniform",
+      "source": "purchased, ground shim stock",
+      "adjustable": false,
+      "note": "Sheet stock sorted to thickness bands, so thickness is close to uniform inside a band."
+    }
+  ]
+}
