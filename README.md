@@ -15,7 +15,7 @@ whole deliverable.
 
 ```bash
 pip install -r requirements.txt
-python run.py                  # bundled example, writes out/report.html
+python run.py                  # bundled example, writes out/report.pdf
 python tests/test_stackup.py   # 16 checks against closed-form values
 ```
 

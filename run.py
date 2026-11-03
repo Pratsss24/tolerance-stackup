@@ -80,7 +80,7 @@ def main() -> int:
         "pareto": charts.pareto_png(stack, ranked, args.out / "pareto.png"),
     }
     report_path = report.build(stack, wc, rss_result, mc, ranked, allocation,
-                               figures, args.out / "report.html")
+                               figures, args.out / "report.pdf")
     print(f"\nreport: {report_path}")
     return 0
 
